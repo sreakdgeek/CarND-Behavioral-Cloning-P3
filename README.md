@@ -132,6 +132,6 @@ Figure: Convolutional Neural Network
 
 Below is the plot for training vs validation accuracy:
 
-![alt text][image12] 
+![alt text][image13] 
 
 #### Results
