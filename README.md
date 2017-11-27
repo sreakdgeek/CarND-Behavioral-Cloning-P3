@@ -164,3 +164,8 @@ Below is the plot for training vs validation accuracy:
 Link to youtube video - Track 1 only (model 1): https://youtu.be/1DqVjwtNQyQ
 
 Link to youtube video - Track 1 only (model 2): https://youtu.be/cQSi2x5Cdok
+
+### Improvements
+
+Currently my model is partially successful on track 2 and needs more fine-tuning of the model architecture as well as add more recovery 
+scenarios. Also since the steering angle decisions not only depend on where the car was in current time frame but also on where the car was on previous time frame, LSTM could be used to model the sequential nature of steering decisions. Also if we can detect the lane lines it helps to adjust steering angles in relation to distnace from the lane lines. Further, a reinforcement learning framework where a reward for driving within the lane lines and penalty for crossing the lane lines could help define a model which may not require much training data. State of the system is defined by the pixel intensities and actions are defined by the steering angle, breaking possition, throttle etc. Objective would to select actions in a given state such that reward (safe driving) is maximized.
