@@ -27,6 +27,9 @@ Behavior Cloning project requires to clone user's driving behavior on simulated 
 [image11]: ./images/transform_before_incr_contrast.JPG "Before contrast increase"
 [image12]: ./images/transform_after_incr_contrast.JPG "After contrast increase"
 [image13]: ./images/Evaluation.JPG "Evaluation - Train vs Validation"
+[image14]: ./images/model_summary_1.JPG "Model summary"
+[image15]: ./images/model_summary_2.JPG "Model summary"
+[image16]: ./images/model_summary_3.JPG "Model summary"
 
 ---
 ### Data Exploration
@@ -70,7 +73,7 @@ Observing the steering angle distribution, tells us that the distribution is ske
 
 After eliminating zero angles, below was the distribtuion of steering angles:
 
-![alt text][image5]
+![alt text][image6]
 
 About 67% percent of the zero angles were eliminated. Eliminating more zero angles (more than 70%) resulted in poor performance.
 
@@ -120,10 +123,35 @@ contrast on left, right and center images.
 
 ### Model Architecture
 
+I have losely followed NVIDIA's CNN architecture. My model only varies in terms of number of filters and number of neurons in
+FC layers and dropouts added. Below are the layer descriptions:
 
-Figure: Convolutional Neural Network
+    1) Preprocessing Layer - Image normalization
+    2) Convolution Layer # 1 - 32 filters, 5x5, RELU activation, Max pool with stride 2, Dropout (20%)
+    3) Convolution Layer # 2 - 32 filters, 5x5, RELU activation, Max pool with stride 2, Dropout (20%)
+    4) Convolution Layer # 3 - 48 filters, 5x5, RELU activation, Max pool with stride 2, Dropout (20%)
+    5) Convolution Layer # 4 - 64 filters, 5x5, RELU activation, Max pool with stride 2, Dropout (20%)
+    6) Convolution Layer # 5 - 64 filters, 5x5, RELU activation, Max pool with stride 2, Dropout (20%)
+    7) Flatten layer
+    8) FC Layer - 1 - 1024 (neurons)
+    9) FC Layer - 2 - 128 (neurons)
+   10) FC Layer - 3 - 64 (neurons)
+   11) Output Layer - 1 neuron (no activation) - Steering Angle Prediction
+
+#### Model Summary
+
+Below is keras model output summary:
+
+![alt text][image14] 
+![alt text][image15] 
+![alt text][image16] 
 
 ### Fine tuning
+
+I have not exactly followed the precise network architecture of NVIDIA's paper. My implementation had different number of filters
+and number of neurons in FC layer. I have used RELU activation function instead of ELU though I have experimented with ELU. Model
+check points was a very useful strategy to save the model after each epoch. Validation loss was not particulary useful metric
+to predict the usefulness of the model.
 
 ### Training vs Validation Accuracy
 
@@ -132,3 +160,6 @@ Below is the plot for training vs validation accuracy:
 ![alt text][image13] 
 
 #### Results
+
+Link to youtube video - Track 1 only: https://youtu.be/1DqVjwtNQyQ
+Link to youtube video - Track 1 and 2: https://youtu.be/cQSi2x5Cdok
