@@ -89,6 +89,8 @@ using below strategies:
 4. Recovery from right-side of the road
 5. Sharp left turn data in Track 1 data
 6. Sharp right turn data in Track 2 data
+7. Add correction of 0.2 for left camera angle
+8. Add correction of -0.2 for right camera angle
 
 
 ### Data Augmentation Strategies - Part 2
@@ -161,9 +163,9 @@ Below is the plot for training vs validation accuracy:
 
 #### Results
 
-Link to youtube video - Track 1 only (model 1): https://youtu.be/1DqVjwtNQyQ
+Link to youtube video - Track 1: https://youtu.be/dLvrlOm586Y
 
-Link to youtube video - Track 1 only (model 2): https://youtu.be/cQSi2x5Cdok
+Link to youtube video - Track 2: https://youtu.be/O8G7hcITCgw 
 
 ### Improvements
 
