@@ -1,4 +1,4 @@
-**Behavior Cloning** 
+## Behavior Cloning
 
 ### Introduction
 
@@ -27,28 +27,25 @@ Behavior Cloning project requires to clone user's driving behavior on simulated 
 [image11]: ./images/transform_before_incr_contrast.JPG "Before contrast increase"
 [image12]: ./images/transform_after_incr_contrast.JPG "After contrast increase"
 [image13]: ./images/Evaluation.JPG "Evaluation - Train vs Validation"
-[image14]:
-[image15]:
-[image16]:
 
 ---
 ### Data Exploration
 
 Let’s examine few of the track images: 
 
-### Original Central Image
+#### Original Central Image
 
 ![alt text][image1] 
 
-### After cropping and resizing hte image
+#### After cropping and resizing the image
 
 ![alt text][image2] 
 
-### Left Image (image captured from the left camera)
+#### Left Image (image captured from the left camera)
 
 ![alt text][image3] 
 
-### Right Image (image captured from the right camera)
+#### Right Image (image captured from the right camera)
 
 ![alt text][image4]
 
@@ -78,7 +75,7 @@ After eliminating zero angles, below was the distribtuion of steering angles:
 About 67% percent of the zero angles were eliminated. Eliminating more zero angles (more than 70%) resulted in poor performance.
 
 
-Data Augmentation Strategies - Part 1
+### Data Augmentation Strategies - Part 1
 
 Using only one run of either of the tracks were sufficient in navigation. Data was augmented
 using below strategies:
@@ -91,7 +88,7 @@ using below strategies:
 6. Sharp right turn data in Track 2 data
 
 
-Data Augmentation Strategies - Part 2
+### Data Augmentation Strategies - Part 2
 
 Further training data was augment with transformations on the images. About 25% of the image
 data was randomly chosen and transformed by randomly flipping, translating or increasing the
