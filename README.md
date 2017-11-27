@@ -162,4 +162,5 @@ Below is the plot for training vs validation accuracy:
 #### Results
 
 Link to youtube video - Track 1 only: https://youtu.be/1DqVjwtNQyQ
+
 Link to youtube video - Track 1 and 2: https://youtu.be/cQSi2x5Cdok
