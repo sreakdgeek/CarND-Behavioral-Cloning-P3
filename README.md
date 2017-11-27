@@ -135,8 +135,8 @@ FC layers and dropouts added. Below are the layer descriptions:
     7) Flatten layer
     8) FC Layer - 1 - 1024 (neurons)
     9) FC Layer - 2 - 128 (neurons)
-   10) FC Layer - 3 - 64 (neurons)
-   11) Output Layer - 1 neuron (no activation) - Steering Angle Prediction
+    10) FC Layer - 3 - 64 (neurons)
+    11) Output Layer - 1 neuron (no activation) - Steering Angle Prediction
 
 #### Model Summary
 
@@ -161,6 +161,6 @@ Below is the plot for training vs validation accuracy:
 
 #### Results
 
-Link to youtube video - Track 1 only: https://youtu.be/1DqVjwtNQyQ
+Link to youtube video - Track 1 only (model 1): https://youtu.be/1DqVjwtNQyQ
 
-Link to youtube video - Track 1 and 2: https://youtu.be/cQSi2x5Cdok
+Link to youtube video - Track 1 only (model 2): https://youtu.be/cQSi2x5Cdok
